@@ -1,0 +1,35 @@
+.cart {
+    font-size: 18px;
+    padding-bottom: 5px;
+    div {
+        margin: 5px 6px;
+    }
+    color: #fff;
+}
+
+.cartitems {
+    display: flex;
+    flex-direction: column;
+    float: left;
+    span {
+        margin-top: 5px;
+        max-width: 125px;
+    }
+}
+
+.cartitem_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    float: right;
+}
+
+.cartitem_info_quantityinfo_button{
+    border-radius: 50%;
+    border: none;
+    transform: scale(0.78, 0.7);
+    opacity: 0.7;
+    &:hover {
+        opacity: 1;
+    }
+}

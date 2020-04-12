@@ -1,0 +1,29 @@
+.carts--defaultstate{
+    position: absolute;
+    top: 85px;
+    left: 1050px;
+    max-width: 250px;
+    //height: 100px;
+    z-index: -1;
+    opacity: 0;
+    background: lighten($color: #000000, $amount: 15);
+    padding: 10px 20px;
+}
+
+.carts_empty {
+    font-size: 1.5rem;
+    font-weight: 350;
+    color: #fff;
+}
+
+.total {
+    margin-top: 5px;
+    max-width: 125px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.totalprice--price {
+    float: right;
+    margin-right: 10px;
+}

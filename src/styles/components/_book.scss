@@ -1,0 +1,37 @@
+.books_container_book {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 3rem;
+    border: 1px solid black;
+    padding: 2rem;
+    max-width: 25rem;
+}
+
+.book_image {
+    transition: 400ms transform ease;
+    &:hover {
+        transform: scale(1.04);
+    }
+}
+
+.book_shortinfo {
+    h4{
+        font-weight: 500;
+        font-size: 1.2rem;
+    }
+}
+
+.books_container_button {
+    width: 14rem;
+    background: green;
+    font-size: 1.8rem;
+    border: none;
+    font-weight: 500;
+    color: #fff;
+    align-self: center;
+    opacity: 0.8;
+    padding: 0.8rem;
+    &:hover {
+        opacity: 1;
+    }
+}

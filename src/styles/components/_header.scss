@@ -1,0 +1,67 @@
+.Header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem $m-size;
+    background: lighten($color: #000000, $amount: 10);
+}
+
+.Header_logotitle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2{
+        font-size: $s-size;
+        font-weight: 350;
+        margin: 7px;
+        color: #ffffff;
+    }
+}
+
+.Header_items {
+    display: flex;
+    align-items: center;
+    a {
+        font-size: $s-size;
+        padding: 0 20px 0 0;
+        color: #ffffff;
+    }
+}
+
+.Header_links {
+    display: inline-block;
+    input {
+        width: 50px;
+    }
+}
+
+.cartbox{
+    display: flex;
+    flex-direction: column;
+}
+
+.cartsbox_title {
+    position: relative;
+    width: 45px;
+    top: 16px;
+    left: -15px;
+    font-size: $s-size;
+    color: white;
+}
+
+.cartsbox_toggler {
+    position: relative;
+    top: -12px;
+    left: -10px;
+    width: 3rem;
+    height: 3rem;
+    opacity: 0;
+    &:checked ~ div {
+        z-index: 1;
+        opacity: 1;
+    }
+    &:hover {
+        cursor: pointer;
+    }
+}
+
