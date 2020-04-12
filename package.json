@@ -2,7 +2,7 @@
   "name": "caloriesfreak-app",
   "version": "1.0.0",
   "description": "",
-  "main": "jest.config.js",
+  "main": "webpack.config.js",
   "scripts": {
     "dev-server": "webpack-dev-server",
     "build:pack": "webpack",
@@ -10,6 +10,9 @@
     "start": "node server/server.js",
     "test": "cross-env NODE_ENV=test jest --config=jest.config.json",
     "heroku-postbuild": "npm run build:packprod"
+  },
+  "engines": {
+    "node": "12.13.1"
   },
   "author": "",
   "license": "ISC",
