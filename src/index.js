@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'normalize.css/normalize.css';
+import './styles/styles.scss';
 import AppRoute, {history} from './routers/AppRoute';
 import {Provider} from 'react-redux';
 import configureStore from './store/store';
 import {firebase} from './firebase/firebase';
 import {startSetBooks} from './actions/books';
-import 'normalize.css/normalize.css';
-import './styles/styles.scss';
 
 
 const store = configureStore();
