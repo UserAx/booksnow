@@ -1,9 +1,7 @@
 .carts--defaultstate{
     position: absolute;
     top: 85px;
-    left: 1050px;
     max-width: 250px;
-    //height: 100px;
     z-index: -1;
     opacity: 0;
     background: lighten($color: #000000, $amount: 15);
