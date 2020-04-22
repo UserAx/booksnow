@@ -32,23 +32,39 @@ const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 export {firebase, googleAuthProvider, database as default};
 
 // const book = {
-//     title: 'The Kingdom Of Nepal',
-//     price: 2500,
-//     description: 'This book is based on research carried out in Nepal between 1972 and 1979, when Nepal was still a Hindu kingdom ruled by a divine monarch.',
-//     ratings: 9.5,
-//     comments: {}
+//     title: 'Nepal Ko Saral Itihas',
+//     price: 850,
+//     description: 'A Easy History of Nepal by Dr. Bambahadur Adhikari.',
+//     ratings: 8.5
 // };
+
+// const book2 = {
+//     title: 'Chin ra Japan Ko Itihas',
+//     price: 395,
+//     description: 'History of China and Japan by Shreeram Upadhyaya. This book will be helpful to history students or general readers.',
+//     ratings: 7.5
+// };
+
+// const book3 = {
+//     title: 'The Past as Present',
+//     price: 952,
+//     description: 'Many popularly held views about the past need to be critically inquired into before they can be taken as historical.',
+//     ratings: 6.5
+// };
+
 
 // const user = {
-//     username: 'Sushant',
-//     password: 'aksnd554',
-//     email: 'sapkota.sushant00@gmail.com',
-//     books: {
-//         purchased: {},
-//         topurchase: {}
-//     }
+//     username: 'Mikal',
+//     email: 'Mikal45@gmail.com',
+//     role: 'USER',
+//     password: 'abcdefgh'
 // };
-
+    
+//     database.ref('users').push(user).then(() => {
+//         console.log('User database updated.');
+//     }).catch((e) => {
+//         console.log(e);
+//     });
 //To add books-history of users.
 // const userbooksHistory = {
 //         purchasedBook: {book_id: 'a5sd4sdass5d12asd1', price: 1500},
@@ -90,7 +106,28 @@ export {firebase, googleAuthProvider, database as default};
 //     console.log(e);
 // });
 
-// database.ref('users').push(user).then(() => {
+// database.ref('books').push(book2).then(() => {
+//     console.log('Book database updated.');
+// }).catch((e) => {
+//     console.log(e);
+// });
+
+// database.ref('books').push(book3).then(() => {
+//     console.log('Book database updated.');
+// }).catch((e) => {
+//     console.log(e);
+// });
+
+
+// database.ref(`users/-M5614teBBL2ObWWHoSR/purchases`).push({book_id: 'BBL2WWHoSR',
+//                                                             book_price: '550'}).then(() => {
+//     console.log('User database updated.');
+// }).catch((e) => {
+//     console.log(e);
+// });
+
+// database.ref(`users/-M5614teBBL2ObWWHoSR/purchases`).push({book_id: 'BKL2WWHoSR',
+//                                                             book_price: '350'}).then(() => {
 //     console.log('User database updated.');
 // }).catch((e) => {
 //     console.log(e);
@@ -98,4 +135,16 @@ export {firebase, googleAuthProvider, database as default};
 
 // database.ref(`users/-M4Kra99_9bqQS8SSIxd`).once('value').then((snapshot) => {
 //     console.log(snapshot.key,snapshot.val());
+// });
+
+// database.ref('users').once('value').then((snapshot) => {
+//     const data = {username: "Userq", password: "1234567890"};
+//     for(const singleUser in snapshot.val()){
+//         const user = {...snapshot.val()[singleUser]};
+//         if(user.username === data.username){
+//             if(user.password === data.password){
+//                 return console.log(user);
+//             }
+//         }
+//     }
 // });

@@ -26,14 +26,15 @@ export const startAddBook = (bookData = {}) => {
     return (dispatch, getState) => {
         //const uid = getState().auth.uid;
         const {
-            title = '',
-            price = 0,
-            descrription = '',
-            ratings = 0,
-            image = undefined,
-            comments = []
+            title,
+            price,
+            description = '',
+            ratings = 'N/A',
+            author,
+            isbn= 'N/A',
+            published
         } = bookData;
-        const book = {title, price, descrription, ratings, image, comments};
+        const book = {title, price, description, ratings, author, isbn, published};
         return database.ref(`books`).push(book).then((ref) => {
           dispatch(addBook({
               id: ref.key,
@@ -43,7 +44,7 @@ export const startAddBook = (bookData = {}) => {
     }
 }
 
-export const startEditBook = ({id, updates}) => {
+export const startEditBook = (id, updates) => {
     return (dispatch, getState) => {
         //const uid = getState().auth.uid;
         return database.ref(`books/${id}`).update(updates).then(() => {

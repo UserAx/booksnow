@@ -5,3 +5,22 @@
     justify-content: space-evenly;
     align-items: center;
 }
+
+.books_addBook {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.books_addBook_Button {
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 1rem 3rem;
+    background: transparentize($color: #000000, $amount: 0.2);
+    color: #ffffff;
+    border: none;
+    transition: 100ms transform ease;
+    &:hover {
+        transform: scale(1.1);
+    }
+}

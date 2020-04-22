@@ -1,7 +1,6 @@
 .carts--defaultstate{
     position: absolute;
     top: 85px;
-    max-width: 250px;
     z-index: -1;
     opacity: 0;
     background: lighten($color: #000000, $amount: 15);
@@ -12,6 +11,7 @@
     font-size: 1.5rem;
     font-weight: 350;
     color: #fff;
+    max-width: 20rem;
 }
 
 .total {
@@ -24,4 +24,22 @@
 .totalprice--price {
     float: right;
     margin-right: 10px;
+}
+
+div.checkout {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    border: 1px solid #000;
+}
+
+button.checkout__button{
+    width: 100%;
+    font-size: 1.5rem;
+    padding: 0;
+    height: 4rem;
+    &:hover {
+        background: #eceeee;
+        color: #000;
+    }
 }

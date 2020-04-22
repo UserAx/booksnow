@@ -8,7 +8,7 @@ export const Carts = (props) => (
         {props.carts.length > 0 && (
             <div>
                 <span  className="total">Total:</span>
-                <span  className="total totalprice--price">NPR {props.totalPrice}</span>
+                <span  className="total totalprice--price">Rs {props.totalPrice}</span>
             </div>
         )}
         <div>
@@ -22,13 +22,17 @@ export const Carts = (props) => (
                     })
                 )}
         </div>
+        {props.carts.length === 0 ? (<></>) : 
+        (<div className="checkout">
+            <button className="checkout__button" onClick={() => {props.history.push('/checkout')}}>Check Out</button>
+        </div>)}
     </div>        
 );
 
 const mapStateToProps = (state) => {
     return {
         carts: state.carts,
-        totalPrice: totalPrice(state.carts)
+        totalPrice: state.carts ? totalPrice(state.carts) : 0
     }
 }
 
