@@ -10,6 +10,7 @@ import {PersistGate} from 'redux-persist/integration/react'
 import {firebase} from './firebase/firebase';
 import {startSetBooks} from './actions/books';
 import {login} from './actions/firebaseauth';
+import Loading from './ReactComponents/components/Loading';
 
 const {store, persistor} = configureStore();
 
@@ -21,15 +22,25 @@ const JSX = () => (
     </Provider>
 );
 
-const renderApp = () => {
-    ReactDOM.render(<JSX/>, document.getElementById('root'));
-}
+let hasRendered = false;
 
-store.dispatch(startSetBooks()).then(() => {renderApp()}).catch((e) => console.log(e));
+const renderApp = () => {
+    if(!hasRendered){
+        ReactDOM.render(<JSX/>, document.getElementById('root'));
+        hasRendered = true;
+    }
+};
+
+ReactDOM.render(<Loading/>, document.getElementById('root'));
+
 
 firebase.auth().onAuthStateChanged((user) => {
     if(user){
         store.dispatch(login(user.uid));
-        console.log('User login');
+        console.log('User logged in.');
     }
 });
+
+setTimeout(() => {
+    store.dispatch(startSetBooks()).then(() => {renderApp()}).catch((e) => console.log(e));
+}, 1000);
