@@ -1,16 +1,23 @@
 import * as firebase from 'firebase';
 //const firebase = require('firebase');
-
 const firebaseConfig = {
     apiKey: process.env.FIREBASE_API_KEY,
-    authDomain:process.env.FIREBASE_AUTH_DOMAIN,
-    databaseURL:process.env.FIREBASE_DATABASEURL,
-    projectId:process.env.FIREBASE_PROJECTID,
-    storageBucket:process.env.FIREBASE_STORAGEBUCKET,
-    messagingSenderId:process.env.FIREBASE_MESSAGINGSENDERID,
-    appId:process.env.FIREBASE_APPID,
-    measurementId:process.env.FIREBASE_MEASUREMENTID
+    authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+    databaseURL: process.env.FIREBASE_DATABASEURL,
+    projectId: process.env.FIREBASE_PROJECTID,
+    storageBucket: process.env.FIREBASE_STORAGEBUCKET,
+    messagingSenderId: process.env.FIREBASE_MESSAGINGSENDERID,
+    appId: process.env.FIREBASE_APPID,
+    measurementId: process.env.FIREBASE_MEASUREMENTID
 };
+
+firebase.initializeApp(firebaseConfig);
+
+const database = firebase.database();
+
+const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
+
+export {firebase, googleAuthProvider, database as default};
 
 // var firebaseConfig = {
 //     apiKey: "AIzaSyD9y1z_oJp51AkRBYtOQRc79230NiY9g5A",
@@ -22,15 +29,6 @@ const firebaseConfig = {
 //     appId: "1:729115736652:web:5251984924f179d0f612e9",
 //     measurementId: "G-SVPZ6173DT"
 // };
-
-firebase.initializeApp(firebaseConfig);
-
-const database = firebase.database();
-
-const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
-
-export {firebase, googleAuthProvider, database as default};
-
 // const book = {
 //     title: 'Nepal Ko Saral Itihas',
 //     price: 850,
