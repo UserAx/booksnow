@@ -1,0 +1,64 @@
+.signup{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signup__error {
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: 100;
+    margin-top: 3rem;
+}
+
+.signup__container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+    max-width: 50rem;
+    align-items: center;
+}
+
+.signup__form__input{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    padding: 0.8rem 2.5rem;
+    inline-size: 50rem;
+}
+
+.login__buttons{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    button {
+        margin-right: 2rem;
+    }
+}
+
+.signup__form__button{
+    width: 20rem;
+    align-self: center;
+    font-size: 1.6rem;
+    padding: 1.4rem 0rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    background: #e7062c;
+    border: none;
+    border-radius: 3px;
+    transition: 100ms transform ease;
+    &:hover {
+        transform: scale(1.1); 
+    }
+} 
+
+.login__buttons--login{
+    padding: 0.5rem 0;
+}
+
+.login__buttons--login::before{
+    content: 'Already have an Account?';
+    font-size: 1.3rem;
+    margin: 0px 5px;
+}

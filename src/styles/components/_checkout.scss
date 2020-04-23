@@ -1,0 +1,95 @@
+.checkout__payment{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.checkout__payment__title {
+    font-size: 3rem;
+    font-weight: 100;
+    margin-top: 4rem;
+}
+
+.checkout__payment__form {
+    width: 35rem;
+}
+
+.checkout__payment__form__cardelement {
+
+}
+
+.checkout__payment__form__button{
+    padding: 0.5rem 5rem;
+    font-size: 2rem;
+    background: lighten($color: #01fc55, $amount: 20);
+    border: none;
+    transition: 150ms background ease;
+    &:hover {
+        background: lighten($color: #01fc55, $amount: 5);
+        color: lighten($color: #000000, $amount: 5);
+    }
+}
+
+.checkout__payment__form__buttoncontainer{
+    justify-content: center;
+    display: flex;
+    margin: 2rem 0rem
+}
+
+.checkout__payment__cart__details{
+    width: 35rem;
+    padding: 1.5rem 2rem;
+    border: 1px solid #000;
+    margin: 2rem 0rem;
+    span {
+        font-size: 1.5rem;
+    }
+}
+
+.checkout__payment__cart__details__title{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #000;
+    padding-bottom: 1rem;
+}
+
+.checkout__payment__cart_details__book{
+    @extend .checkout__payment__cart__details__title;
+    border: none;
+    padding: none;
+    margin-bottom: 0;
+}
+
+.checkout__payment__cart_details__bookinfos{
+    display: flex;
+    flex-direction: column;
+    word-wrap: normal;
+}
+
+.checkout__payment__cart_details__totalprice{
+    @extend .checkout__payment__cart__details__title;
+    border: none;
+    padding: none;
+    border-top: 1px solid #000;
+    padding-top: 1rem;
+    margin-bottom: 0;
+}
+
+.checkout__payment__cart_details__bookinfos__price {
+    align-self: center;
+}
+
+.checkout__payment__form__container__input{
+    width: 100%;
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+    padding: 1rem;
+}
+
+.checkout__payment__error {
+    max-width: 35rem;
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}

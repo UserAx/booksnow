@@ -1,0 +1,38 @@
+.BookForm-Container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0rem;
+    h2{
+        content: 'Book Details';
+        font-size: 3.2rem;
+    }
+}
+
+.BookForm-Container__form{
+    display: flex;
+    flex-direction: column;
+} 
+
+.BookForm-Container__input{
+    @extend .signup__form__input;
+}
+
+.BookForm-Container__textarea {
+    @extend .signup__form__input;
+    font-size: 3rem;
+    height: 10rem;
+}
+
+.BookForm-Container__button {
+    @extend .books_addBook_Button;
+    inline-size: 16rem;
+    align-self: center;
+    margin: 2rem;
+    height: 5rem;
+}
+
+.BookForm-Container__image{
+    margin-top: 2rem;
+    font-size: 1.8rem;
+}

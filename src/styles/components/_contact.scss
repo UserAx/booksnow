@@ -1,0 +1,36 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: darken($color: #fff, $amount: 0);
+    padding: 2rem 0 0 2rem;
+    color: lighten($color: #000000, $amount: 35);
+    justify-content: center;
+}
+
+.contact__title{
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+.contact__contents {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.8rem;
+    line-height: 2;
+}
+
+.credits{
+    display: flex;
+    justify-content: center;
+}
+
+.credits__name{
+    font-size: 4rem;
+    color: #000;
+}
+
+.credits__name::after {
+    content: ' (sapkota.sushant00@gmail.com)';
+    font-size: 1.5rem;
+}
