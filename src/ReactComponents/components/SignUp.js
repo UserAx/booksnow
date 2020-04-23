@@ -11,7 +11,8 @@ class SignUp extends React.Component {
 
     handleSignIn = async() => {
         await this.props.startLogin();
-        this.props.login(this.props.Authenticated);
+        // login: (uid) => dispatch(login(uid)),
+        // this.props.login(this.props.Authenticated);
         //redirect from here to the purchases of that user.
         console.log('After firebase function.');
         this.props.history.push('/');
@@ -80,7 +81,6 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         startLogin: () => dispatch(startLogin()),
-        login: (uid) => dispatch(login(uid)),
         startSignUpUser: (userData) => dispatch(startSignUpUser(userData))        
     }
 }
