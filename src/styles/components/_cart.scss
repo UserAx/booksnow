@@ -11,8 +11,8 @@
     display: flex;
     flex-direction: column;
     float: left;
-    span {
-        margin-top: 5px;
+    span:first-child {
+        margin-top: 12px;
         max-width: 125px;
     }
 }
@@ -25,13 +25,22 @@
 }
 
 button.cartitem_info_quantityinfo_button{
-    border-radius: 50%;
     border: none;
-    transform: scale(0.60, 0.75);
+    transform: scale(0.7, 0.8);
     opacity: 0.7;
-    background: darken($color: #fff, $amount: 65);
     padding: 0px 8px;
     &:hover {
         opacity: 1;
+        transform: scale(0.9);
     }
+}
+
+.cartitems__quantity{
+    font-size: 1.5rem;
+}
+
+span.cartitems__quantity::before {
+    content: 'x';
+    font-size: 1.5rem;
+    font-weight: lighter;
 }

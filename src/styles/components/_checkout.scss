@@ -65,6 +65,12 @@
     display: flex;
     flex-direction: column;
     word-wrap: normal;
+    span:nth-child(2){
+        &::before{
+            content: 'x';
+            font-weight: lighter;
+        }
+    }
 }
 
 .checkout__payment__cart_details__totalprice{

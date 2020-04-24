@@ -22,9 +22,9 @@ class SignUp extends React.Component {
         e.preventDefault();
         const $form= document.querySelector('form');
         const username= $form.querySelectorAll('input')[0].value;
-        const password = $form.querySelectorAll('input')[1].value;
-        const passwordCheck = $form.querySelectorAll('input')[2].value;
-        const email =  $form.querySelectorAll('input')[3].value;
+        const password = $form.querySelectorAll('input')[2].value;
+        const passwordCheck = $form.querySelectorAll('input')[3].value;
+        const email =  $form.querySelectorAll('input')[1].value;
         const user = formValidator({username, password, passwordCheck, email});
         
         if(user.error){
@@ -46,12 +46,12 @@ class SignUp extends React.Component {
                 <form className="signup__container" onSubmit={this.onSubmit}>
                     <input  className="signup__form__input" type="text" 
                     placeholder="Username"/>
+                    <input className="signup__form__input"
+                    type="text" placeholder="Email"/>
                     <input className="signup__form__input" type="password"
                     placeholder="Password"/>
                     <input className="signup__form__input" type="password"
                     placeholder="Retype Password"/>
-                    <input className="signup__form__input"
-                    type="text" placeholder="Email"/>
                     <div >
                         <button className="signup__form__button" 
                         >Sign Up</button>

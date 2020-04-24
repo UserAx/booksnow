@@ -1,8 +1,7 @@
 .books_container_book {
     display: flex;
     flex-direction: column;
-    margin: 1rem 3rem;
-    border: 1px solid black;
+    margin: 2.5rem 2rem;
     padding: 2rem;
     max-width: 25rem;
     box-shadow: 0 0 5px 0 rgba($color: #000000, $alpha: 0.4);
@@ -17,9 +16,14 @@
 
 .book_shortinfo {
     h4{
-        font-weight: 500;
         font-size: 1.2rem;
+        font-weight: 500;
     }
+    
+    h4:first-child{
+        font-size: 2rem;
+    }
+
 }
 
 .books_container_button {

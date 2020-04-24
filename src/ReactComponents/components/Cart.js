@@ -36,8 +36,8 @@ export class Cart extends React.Component {
         return (
             <div className="cart">
                 <div className="cartitems">
-                    <span>{this.props.title}</span>
-                    <span>{this.props.quantity}</span>
+                        <span>{this.props.title}</span>
+                        <span className="cartitems__quantity">{this.props.quantity}</span> 
                 </div>
                 <div className="cartitem_info">
                     <div>
