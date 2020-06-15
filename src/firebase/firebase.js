@@ -19,16 +19,7 @@ const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 
 export {firebase, googleAuthProvider, database as default};
 
-// var firebaseConfig = {
-//     apiKey: "AIzaSyD9y1z_oJp51AkRBYtOQRc79230NiY9g5A",
-//     authDomain: "booksnow-ba5cb.firebaseapp.com",
-//     databaseURL: "https://booksnow-ba5cb.firebaseio.com",
-//     projectId: "booksnow-ba5cb",
-//     storageBucket: "booksnow-ba5cb.appspot.com",
-//     messagingSenderId: "729115736652",
-//     appId: "1:729115736652:web:5251984924f179d0f612e9",
-//     measurementId: "G-SVPZ6173DT"
-// };
+
 // const book = {
 //     title: 'Nepal Ko Saral Itihas',
 //     price: 850,
